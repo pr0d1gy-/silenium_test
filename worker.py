@@ -1,4 +1,4 @@
-from selenium.webdriver import PhantomJS, DesiredCapabilities, Chrome, ChromeOptions
+from selenium.webdriver import Chrome, ChromeOptions
 
 from scenarios import scenarios_list
 

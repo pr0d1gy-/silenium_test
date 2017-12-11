@@ -4,7 +4,7 @@
 
 `sudo apt-get install -y build-essential g++ git python3.5 python3.5-dev python3-psycopg2 libxml2-dev python3-pip libffi-dev`
 
-Also you need to install `Chrome` for run Chrome browser. Follow the instruction by this [LINK](https://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line).
+You need to install `Chrome` for run Chrome browser. Follow the instruction by this [LINK](https://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line). Also you can try to use application with virtual display if you working on the server: `xvfb`. 
 
 And clone the repo.
 

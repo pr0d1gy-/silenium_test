@@ -13,7 +13,6 @@ class Application(object):
     browser = None
     following_list = None
     following_count = None
-    unfollowing_list = None
 
     def __init__(self, arguments):
         self.config = arguments
@@ -22,7 +21,6 @@ class Application(object):
 
         self.following_list = []
         self.following_count = 0
-        self.unfollowing_list = []
 
     def check_config(self):
         if self.config.un_follow_only:

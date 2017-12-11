@@ -50,7 +50,7 @@ class FollowingDialogueScenario(BaseScenario):
             '/html/body/div[4]/div/div[2]/div/div[2]')
 
         # Function for counting loaded followings
-        now_count = lambda: len(following_ul.find_elements(By.TAG_NAME, 'li'))
+        now_count = lambda: len(following_ul.find_elements(By.TAG_NAME, 'li'))  # noqa: E731,E501
 
         # Scroll while loaded count is not exact total count
         while now_count() < self.app.following_count:

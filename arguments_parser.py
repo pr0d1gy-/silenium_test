@@ -36,3 +36,15 @@ parser.add_argument(
     type=bool,
     default=False
 )
+
+parser.add_argument(
+    '-a', '--user-agent',
+    help='Browser user agent',
+    type=str
+)
+
+parser.add_argument(
+    '-s', '--proxy-server',
+    help='Proxy server for chrome. Example: 172.11.28.32:8188',
+    type=str
+)

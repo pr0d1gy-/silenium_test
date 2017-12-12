@@ -21,7 +21,22 @@ class Worker(object):
 
     @classmethod
     def default_capabilities(cls):
-        return ChromeOptions().to_capabilities()
+        capabilities = ChromeOptions()
+        capabilities.add_argument('--disable-application-cache')
+        # Set user agent
+        capabilities.add_argument('--user-agent={}'.format(
+            (
+                cls.app.USER_AGENT if not cls.app.config.user_agent else
+                cls.app.config.user_agent
+            )
+        ))
+        # Set proxy server
+        if cls.app.config.proxy_server:
+            capabilities.add_argument('--proxy-server={}'.format(
+                cls.app.config.proxy_server
+            ))
+
+        return capabilities.to_capabilities()
 
     @classmethod
     def start_scenarios(cls):
